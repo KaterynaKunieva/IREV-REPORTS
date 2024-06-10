@@ -1,0 +1,8 @@
+requests
+pytz
+environs
+telethon
+aiogram
+google-api-python-client
+python-dateutil
+requests

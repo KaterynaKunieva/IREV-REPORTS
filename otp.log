@@ -1,0 +1,17 @@
+INFO:__main__:2024-06-10 17:53:37.127655: bot launched
+INFO:telethon.network.mtprotosender:Connecting to 149.154.175.53:443/TcpFull...
+INFO:telethon.network.mtprotosender:Connection to 149.154.175.53:443/TcpFull complete!
+INFO:telethon.network.mtprotosender:Disconnecting from 149.154.175.53:443/TcpFull...
+INFO:telethon.network.mtprotosender:Disconnection from 149.154.175.53:443/TcpFull complete!
+INFO:telethon.network.mtprotosender:Not disconnecting (already have no connection)
+INFO:__main__:2024-06-10 17:54:10.527819: bot launched
+INFO:telethon.network.mtprotosender:Connecting to 149.154.175.53:443/TcpFull...
+INFO:telethon.network.mtprotosender:Connection to 149.154.175.53:443/TcpFull complete!
+INFO:telethon.network.mtprotosender:Disconnecting from 149.154.175.53:443/TcpFull...
+INFO:telethon.network.mtprotosender:Disconnection from 149.154.175.53:443/TcpFull complete!
+INFO:telethon.network.mtprotosender:Not disconnecting (already have no connection)
+INFO:__main__:2024-06-10 17:59:30.549799: bot launched
+INFO:telethon.network.mtprotosender:Connecting to 149.154.175.53:443/TcpFull...
+INFO:telethon.network.mtprotosender:Connection to 149.154.175.53:443/TcpFull complete!
+INFO:__main__:2024-06-10 17:59:57.494267: OTP message received
+INFO:__main__:2024-06-10 17:59:57.494267: Parsing OTP code
