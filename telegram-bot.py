@@ -2,6 +2,8 @@ from asyncio import Task
 
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
+from aiogram.enums.parse_mode import ParseMode
+from aiogram.client.bot import DefaultBotProperties
 from aiogram import F
 
 import asyncio
@@ -19,7 +21,7 @@ async def start_bot():
     task: Task = None
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
-    bot = Bot(token=settings.bots.bot_token, parse_mode="HTML")
+    bot = Bot(token=settings.bots.bot_token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     await bot.delete_webhook(drop_pending_updates=True)
     dp = Dispatcher()
 
@@ -36,6 +38,7 @@ async def start_bot():
     dp.callback_query.register(handler_drive_update, F.data.startswith('update_drive|'))
 
     logger.info("Bot is starting...")
+
     async def on_startup():
         logging.info('Bot is starting up...')
         global task

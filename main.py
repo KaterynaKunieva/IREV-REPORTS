@@ -221,13 +221,14 @@ async def download_new_report(path_to_save=""):
 
 
 def get_columns(report_type):
+    start_token = get_start_token()
+    stat_ltd_token = get_stat_ltd_token(start_token)
     url = 'https://stats-ldlt.irev.com/api/crm/v1/widget/data'
     body = {"widget": "DataExporter\\Available",
             "settings": {},
             **generate_year_filter()
             }
-    start_token = get_start_token()
-    stat_ltd_token = get_stat_ltd_token(start_token)
+
     headers = {
         "Authorization": f"Bearer {stat_ltd_token}",
         "Client-Id": '155'
@@ -289,14 +290,4 @@ def get_report_type(report_name):
 
 
 if __name__ == "__main__":
-    pass
-    # print(get_otp_code())
-    # print(len(get_columns(get_report_type("Sale Statuses Report"))))
-    # print(len(get_columns(get_report_type("Leads Report"))))
-    # print(len(get_columns(get_report_type("Leads Push Logs Report"))))
-        # async def test():
-        #     link = await get_link_to_report(
-        #         'report_builder_clientId_155_masterId_1190_name_leads-report_date_2024-05-29T05:16:49.847Z')
-        #     print(link)
-        #
-        # asyncio.run(test())  # Await and run the async function using asyncio.run()
+    create_new_report(get_report_type("Leads Report"))
